@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://cutScene/ButterPie.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Sprites/Pies/ButterChickenIdle2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Sprites/Pies/ButterChickenIdle3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Sprites/Pies/ButterChickenIdle1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Sprites/Pies/ButterChickenIdle0.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Pie",
+"speed": 5.0
+} ]
+
+[node name="ButterPie" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 35.9078, -17.9539 )
+scale = Vector2( 2.12212, 2.12212 )
+frames = SubResource( 1 )
+animation = "Pie"
+frame = 4
+playing = true
+
+[node name="Pie" type="Area2D" parent="."]
+position = Vector2( 35.9078, -17.9539 )
+scale = Vector2( 2.12212, 2.12212 )
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pie"]
+polygon = PoolVector2Array( -12.625, 12.3125, 15.8125, 12.25, 27.5, -3.1875, -0.4375, -9.375, -25.4375, -1.5625 )
+
+[connection signal="body_entered" from="Pie" to="." method="_on_Pie_body_entered"]

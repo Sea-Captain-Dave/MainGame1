@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TileMaps/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cutScene/Bakery.gd" type="Script" id=3]
+[ext_resource path="res://cutScene/Nobel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://cutScene/storyboxBakery2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/Sprites/Pies/SteacknCheeseIdle2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Sprites/Pies/MincePieIdle1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Sprites/Pies/ButterChickenIdle0.png" type="Texture" id=8]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -7470791, 21, 0, -4587315, 21, 0, -3801029, 25, 0, -3800929, 26, 0, -3800829, 26, 0, -3800729, 26, 0, -3800629, 25, 0, -3800529, 25, 0, -3800429, 25, 0, -3800409, 26, 0, -3800309, 25, 0, -3800249, 25, 0, -3800208, 26, 0, -3800108, 25, 0, -3735391, 24, 0, -3735291, 23, 0, -3669651, 23, 0, -3669550, 22, 0, 0, 18, 0, 104, 18, 0, 208, 18, 0, 312, 18, 0, 416, 18, 0, 520, 18, 0, 624, 18, 0, 729, 18, 0, 833, 18, 0, 937, 18, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -16187444, 26, 0, -16252880, 26, 0, -16252780, 25, 0, -16252680, 25, 0, -16252580, 25, 0, -16252481, 25, 0, -16252381, 25, 0, -16252281, 25, 0, -16252181, 25, 0, -16252081, 25, 0, -16251981, 25, 0, -16251931, 25, 0, -11336884, 25, 0, -11336784, 25, 0, -11009939, 25, 0, -11009840, 26, 0, -10354479, 25, 0, -10288843, 25, 0, -9370904, 25, 0, -8978484, 25, 0, -9042971, 25, 0, -7536123, 21, 0, -7470791, 21, 0, -3800093, 25, 0, -3735391, 24, 0, -3734878, 24, 0, -3669755, 23, 0, -3669651, 23, 0, -3669550, 22, 0, -3669346, 536870936, 0, -1769524, 25, 0 )
+
+[node name="Nobel" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 862.774, -2.27724 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.312, 6.4797 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 105, 105 )
+format = 1
+tile_data = PoolIntArray( -196609, 18, 0, -262144, 18, 0, -262143, 18, 0, -262142, 18, 0, -262141, 18, 0, -262140, 18, 0, -262139, 18, 0, -262138, 18, 0, -262137, 18, 0, -262136, 18, 0, -262135, 18, 0, -131074, 18, 0, -196598, 18, 0, -65538, 18, 0, -65537, 27, 0, -131062, 18, 0, -2, 18, 0, -65526, 18, 0, 65534, 18, 0, 65535, 18, 0, 9, 18, 0, 10, 18, 0, 131070, 18, 0, 131071, 18, 0, 65536, 18, 0, 65537, 18, 0, 65538, 18, 0, 65539, 18, 0, 65540, 18, 0, 65541, 18, 0, 65542, 18, 0, 65543, 18, 0, 65544, 18, 0, 65545, 18, 0, 65546, 18, 0 )
+
+[node name="pie1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 668, -57 )
+texture = ExtResource( 8 )
+
+[node name="pie2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 733, -57 )
+texture = ExtResource( 7 )
+
+[node name="pie3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 804, -57 )
+texture = ExtResource( 6 )
+
+[node name="storybox" parent="." instance=ExtResource( 5 )]
+margin_left = 350.682
+margin_top = -256.39
+margin_right = 731.682
+margin_bottom = -30.3901

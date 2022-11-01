@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cutScene/storybox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Sprites/Dag/Idle0.png" type="Texture" id=2]
+[ext_resource path="res://cutScene/CutScene1.gd" type="Script" id=3]
+[ext_resource path="res://Art/Untitled.png" type="Texture" id=4]
+
+[node name="CutScene1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 258, 24 )
+scale = Vector2( 0.257316, 0.257316 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 2775.44, 3456.32, 3181.48, 2093.89 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 257, 88 )
+scale = Vector2( 0.305052, 0.307023 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 6874.26, 1808.66, 2683.87, 2424.35 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 243, 228 )
+current = true
+zoom = Vector2( 0.4, 0.4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -3, 107 )
+polygon = PoolVector2Array( 0, 229, 121, 229, 158, 231, 223, 227, 313, 227, 309, 270, 216, 258, 167, 258, 109, 259, 5, 255 )
+
+[node name="storybox" parent="." instance=ExtResource( 1 )]
+margin_left = 106.0
+margin_top = 249.0
+margin_right = 249.0
+margin_bottom = 320.0
+
+[node name="fakeDag" type="Sprite" parent="."]
+position = Vector2( 47, 301 )
+texture = ExtResource( 2 )

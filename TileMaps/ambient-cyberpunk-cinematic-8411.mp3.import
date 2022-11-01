@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ambient-cyberpunk-cinematic-8411.mp3-635fac50c20b7f87ff8cef705edc6e8c.mp3str"
+
+[deps]
+
+source_file="res://TileMaps/ambient-cyberpunk-cinematic-8411.mp3"
+dest_files=[ "res://.import/ambient-cyberpunk-cinematic-8411.mp3-635fac50c20b7f87ff8cef705edc6e8c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

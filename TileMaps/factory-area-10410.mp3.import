@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/factory-area-10410.mp3-0ea36cf003a3a97107c2c0ded31d5b94.mp3str"
+
+[deps]
+
+source_file="res://TileMaps/factory-area-10410.mp3"
+dest_files=[ "res://.import/factory-area-10410.mp3-0ea36cf003a3a97107c2c0ded31d5b94.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

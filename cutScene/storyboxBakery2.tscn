@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Art/border01.png" type="Texture" id=1]
+[ext_resource path="res://cutScene/ChatBoxBake.gd" type="Script" id=2]
+[ext_resource path="res://cutScene/ChatBoxNew.gd" type="Script" id=3]
+[ext_resource path="res://Art/CutsceneStuff.png" type="Texture" id=4]
+[ext_resource path="res://cutScene/Next.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/Sprites/Dag/Idle0.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1331, 386 )
+
+[node name="storybox" type="Panel"]
+margin_right = 381.0
+margin_bottom = 226.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="ChatBox" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 12.0
+margin_right = 231.0
+margin_bottom = 124.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "I Have decided there will 
+be a manditory bake off.
+The winner gets this car,
+The loser gets shot.
+Bring your goods to me Friday"
+script = ExtResource( 2 )
+
+[node name="Person" type="Sprite" parent="ChatBox"]
+position = Vector2( 256, 100 )
+scale = Vector2( 2.22666, 2.22666 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 895.562, 267.706, 33.6475, 57.2929 )
+
+[node name="Dag" type="Sprite" parent="ChatBox"]
+visible = false
+position = Vector2( 255, 114.167 )
+scale = Vector2( 2.15893, 2.15893 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 14.8407, 1.4273, 35.759, 49.3814 )
+
+[node name="Label" type="Label" parent="ChatBox"]
+margin_left = 207.5
+margin_top = 1.66667
+margin_right = 402.5
+margin_bottom = 91.6667
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Jeff,
+The King"
+
+[node name="SkipStoryLines" type="Button" parent="."]
+visible = false
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 224.0
+text = "Skip"
+
+[node name="Next" type="Button" parent="."]
+margin_left = 43.0
+margin_top = 136.0
+margin_right = 107.0
+margin_bottom = 167.0
+rect_scale = Vector2( 2, 2 )
+text = "Next"
+script = ExtResource( 5 )
+
+[connection signal="pressed" from="Next" to="ChatBox" method="_on_Next_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ough-47202.mp3-a20eaf278ae2d3b00ec1a45c351c8579.mp3str"
+
+[deps]
+
+source_file="res://TileMaps/ough-47202.mp3"
+dest_files=[ "res://.import/ough-47202.mp3-a20eaf278ae2d3b00ec1a45c351c8579.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
